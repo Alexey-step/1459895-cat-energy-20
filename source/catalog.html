@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>"Cat Energy" - Каталог продукции</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -16,20 +17,20 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a>Каталог продукции</a>
+              <a class="site-list__link">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+              <a class="site-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="catalog-main">
-      <section class="catalog">
+      <section class="catalog container">
         <h1 class="catalog__title">Каталог продукции</h1>
         <ul class="catalog__list catalog-card">
           <li class="catalog-card__item">
@@ -43,7 +44,7 @@
                 </a>
                 <table class="catalog-card__parameters">
                   <tr>
-                    <td>объем</td>
+                    <td>Объем</td>
                     <td>500 г</td>
                   </tr>
                   <tr>
@@ -228,7 +229,7 @@
           </li>
         </ul>
       </section>
-      <section class="extra-products">
+      <section class="extra-products container">
         <h2 class="extra-products__title">Дополнительные товары</h2>
         <ul class="extra-products__list products">
           <li class="products__item">
@@ -280,7 +281,7 @@
         </p>
       </section>
       <section class="contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper container">
           <h2 class="contacts__title">
             Приглашаем к сотрудничеству дилеров!
           </h2>
@@ -292,7 +293,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper container">
         <a href="index.html" class="page-footer__logo">
           <img src="https://via.placeholder.com/150x150" alt="Логотип компании Cat Energy">
         </a>

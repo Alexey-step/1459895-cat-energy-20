@@ -1,0 +1,30 @@
+.works {
+  margin-bottom: 42px;
+}
+
+.works__title {
+  .font(@Oswald,normal,normal,36px,40px);
+  color: @basic-black;
+  margin-bottom: 38px;
+}
+
+.works__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.works__item {
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3) {
+    margin-bottom: 20px;
+  }
+}
+
+.works__text {
+  position: relative;
+  .font(@Arial,normal,normal,14px,18px);
+  color: @basic-darkgrey;
+  padding-left: 80px;
+}

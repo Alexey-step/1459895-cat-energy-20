@@ -1,0 +1,108 @@
+.programs {
+  margin-bottom: 27px;
+}
+
+.programs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.programs__item {
+  background-color: @basic-grey;
+  padding-top: 30px;
+  padding-bottom: 18px;
+  &:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+.programs__title {
+  position: relative;
+  .font(@Oswald,normal,normal,24px,37px);
+  text-transform: uppercase;
+  color: @basic-black;
+  margin-bottom: 29px;
+  padding-left: 91px;
+}
+
+.programs__title--cat {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 29px;
+    width: 50px;
+    height: 53px;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: @basic-green;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+.programs__title--panther {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: @basic-green;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+.programs__description {
+  position: relative;
+  .font(@Arial,normal,normal,14px,18px);
+  color: @basic-darkgrey;
+  width: 227px;
+  margin-left: 20px;
+  border-bottom: 1px solid @border-bottom;
+  padding-bottom: 23px;
+}
+
+.programs__link {
+  position: relative;
+  .font(@Oswald,normal,normal,16px,16px);
+  text-transform: uppercase;
+  color: @basic-black;
+  padding-left: 19px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: -47px;
+    width: 32px;
+    height: 10px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
