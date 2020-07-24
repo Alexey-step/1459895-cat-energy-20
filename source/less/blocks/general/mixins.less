@@ -1,6 +1,19 @@
-.font(@size,@height,@style: normal,@weight: normal,) {
+.font(@size, @height, @style: normal, @weight: normal) {
   font-style: @style;
   font-weight: @weight;
   font-size: @size;
   line-height: @height;
+}
+
+.container() {
+  padding: 0 20px;
+  margin: 0 auto;
+  width: @mobile-width;
+}
+
+.programs-before() {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
