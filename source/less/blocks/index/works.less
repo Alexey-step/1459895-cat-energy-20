@@ -23,6 +23,18 @@
     margin-bottom: 0;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @basic-green;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
   &--leaf::before {
     top: 10px;
     left: 30px;
@@ -53,18 +65,6 @@
     width: 32px;
     height: 33px;
     background-image: url("../img/advantage-clock@1x.png");
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: @basic-green;
-    background-repeat: no-repeat;
-    background-position: 0 0;
   }
 }
 
