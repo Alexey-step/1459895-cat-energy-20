@@ -5,15 +5,8 @@
   line-height: @height;
 }
 
-.container(@padding: 0 20px, @margin: 0 auto, @width: @mobile-width) {
-  padding: @padding;
-  margin: @margin;
-  width: @width;
-}
-
-.content-before() {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.container(@padding-container: 0 20px, @margin-container: 0 auto, @width-container: @mobile-width) {
+  padding: @padding-container;
+  margin: @margin-container;
+  width: @width-container;
 }
