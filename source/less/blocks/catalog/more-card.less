@@ -1,9 +1,65 @@
+.more-card {
+  position: relative;
+  padding-top: 71px;
+
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+    margin: 0;
+    border: 2px solid @basic-grey;
+    padding-top: 161px;
+    padding-bottom: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 160px 38px 40px 38px;
+  }
+}
+
 .more-card__title {
   .font(16px, 20px);
   text-transform: uppercase;
   text-align: center;
   color: @special-lightblack;
   margin: 0 0 8px;
+
+  & br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 22px);
+    margin: 0 0 23px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 125px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      height: 60px;
+      top: 52px;
+      left: 132px;
+      background-image: url("../img/icon-plus-mobile.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 51px;
+      left: 92px;
+    }
+  }
 }
 
 .more-card__text {
@@ -12,10 +68,45 @@
   text-align: center;
   color: @basic-darkgrey;
   margin: 0 0 21px;
+
+  & br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .font(16px, 18px);
+    margin: 0 0 87px;
+  }
 }
 
 .more-card__link {
   .font(16px, 0);
   color: @basic-darkgrey;
   background-color: @basic-grey;
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: @special-greylight;
+  }
+
+  &:active {
+    color: @basic-greyopacity;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 0;
+    width: 249px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 169px;
+  }
 }

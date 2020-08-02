@@ -9,4 +9,20 @@
   padding: 0 20px;
   margin: 0 auto;
   width: @mobile-width;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+    width: @desktop-width;
+  }
+}
+
+.list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

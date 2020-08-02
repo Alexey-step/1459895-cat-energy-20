@@ -1,0 +1,358 @@
+.form {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form__wrapper {
+  border: none;
+  margin: 0 0 27px;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: 0 0 69px;
+  }
+
+  &:first-child {
+    @media (min-width: @desktop-width) {
+      width: 569px;
+      margin: 0;
+    }
+  }
+
+  &--last {
+    margin: 0 0 34px;
+
+    @media (min-width: @desktop-width) {
+      margin: 0 0 61px;
+    }
+  }
+
+  &:nth-child(2) {
+    position: relative;
+    padding: 20px 0 22px;
+
+    @media (min-width: @tablet-width) {
+      border: 1px solid @input-border;
+      padding: 25px 0 25px 27px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 568px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 320px;
+      height: 1px;
+      background-color: @border-bottom;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      width: 320px;
+      height: 1px;
+      background-color: @border-bottom;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
+    }
+  }
+}
+
+.form__list {
+  .list();
+}
+
+.form__list-contacts {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 78px;
+  }
+}
+
+.form__item {
+  display: flex;
+  align-items: baseline;
+}
+
+.form__label,
+.form__input,
+.form__textarea {
+  .font(16px, 18px);
+  font-family: @basic-font;
+  text-transform: uppercase;
+  color: @basic-darkgrey;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 30px);
+  }
+}
+
+.form__label {
+  &--text {
+    margin-right: 10px;
+  }
+
+  &--radio,
+  &--checkbox {
+    position: relative;
+    padding-left: 46px;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 0 25px;
+  }
+
+  &--radio::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @border-bottom;
+    border-radius: 50%;
+  }
+
+  &--checkbox::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @border-bottom;
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+    }
+  }
+
+  &--radio-last,
+  &--checkbox-last {
+    margin-bottom: 0;
+  }
+}
+
+.form__input--radio:checked + .form__label--radio::after {
+  content: "";
+  position: absolute;
+  top: 3.25px;
+  left: 8.25px;
+  width: 13.5px;
+  height: 13.5px;
+  background-color: @basic-green;
+  border-radius: 50%;
+}
+
+.form__input--radio {
+  &:hover + .form__label--radio::before,
+  &:focus + .form__label--radio::before {
+    border: 1px solid @hover-radio;
+  }
+
+  &:active + .form__label--radio::before {
+    opacity: 0.3;
+  }
+
+  &:checked:active + .form__label--radio::before,
+  &:checked:active + .form__label--radio::after {
+    opacity: 0.3;
+  }
+}
+
+.form__input--checkbox {
+  &:hover + .form__label--checkbox::before,
+  &:focus + .form__label--checkbox::before {
+    border: 1px solid @hover-radio;
+  }
+
+  &:active + .form__label--checkbox::before {
+    opacity: 0.3;
+  }
+}
+
+.form__input {
+  &--text {
+    margin: 0 0 13px;
+    padding: 13px 0 13px 16px;
+    flex-grow: 1;
+    border: 1px solid @input-border;
+    outline: transparent;
+
+    &:hover {
+      border: 1px solid @scale-background;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid @basic-darkgrey;
+    }
+
+    @media (min-width: @tablet-width) {
+      margin: 0 0 20px;
+      padding: 10px 0 10px 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 10px 0 11px 20px;
+    }
+  }
+
+  &::placeholder {
+    color: @basic-darkgrey;
+  }
+}
+
+.form__title {
+  .font(24px, 26px);
+  position: relative;
+  display: inline-block;
+  padding-right: 22px;
+  color: @basic-black;
+  background-color: white;
+  margin: 0 0 34px;
+
+  @media (min-width: @tablet-width) {
+    .font(36px, 36px);
+    margin: 0 0 76px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-left: -40px;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    width: 100vw;
+    height: 2px;
+    background-color: @basic-green;
+    z-index: -1;
+  }
+
+  &::before {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      right: 0;
+    }
+  }
+
+  &::after {
+    left: -40px;
+  }
+
+  &--line br {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--line::after {
+    top: 30%;
+
+    @media (min-width: @tablet-width) {
+      top: 50%;
+    }
+  }
+}
+
+.form__btn {
+  .font(16px, 20px);
+  font-family: @basic-font;
+  border: none;
+  width: 280px;
+  min-height: 40px;
+  cursor: pointer;
+  margin: 0 0 21px;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 0);
+    margin: 0;
+    margin-right: 61px;
+    width: 282px;
+    min-height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin: 0;
+  }
+}
+
+.form__text {
+  .font(14px, 16px);
+  font-family: @special-font;
+  color: @basic-black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    .font(16px, 16px);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.form__textarea {
+  padding: 13px 0 121px 15px;
+  width: 280px;
+  border: 1px solid @input-border;
+
+  @media (min-width: @tablet-width) {
+    width: 631px;
+    padding: 10px 0 134px 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
+.form__list-checkbox {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 123px;
+    row-gap: 32px;
+    width: 565px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 104px;
+    row-gap: none;
+    width: 100%;
+  }
+}
+
+.form__btn-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    width: 565px;
+  }
+}
