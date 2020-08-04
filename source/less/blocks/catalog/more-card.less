@@ -1,46 +1,43 @@
 .more-card {
   position: relative;
-  padding-top: 71px;
+  padding-top: 18px;
 
 
   @media (min-width: @tablet-width) {
     background-color: @basic-white;
     margin: 0;
     border: 2px solid @basic-grey;
-    padding-top: 161px;
+    padding-top: 52px;
     padding-bottom: 38px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 160px 38px 40px 38px;
+    padding: 51px 38px 40px 38px;
   }
 }
 
 .more-card__title {
   .font(16px, 20px);
+  position: relative;
   text-transform: uppercase;
   text-align: center;
   color: @special-lightblack;
   margin: 0 0 8px;
-
-  & br {
-    display: none;
-
-    @media (min-width: @tablet-width) {
-      display: block;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     .font(20px, 22px);
     margin: 0 0 23px;
+    max-width: 134px;
   }
 
   &::before {
     content: "";
-    position: absolute;
-    top: 32px;
-    left: 125px;
+    position: relative;
+    display: block;
+    margin-bottom: 23px;
     width: 30px;
     height: 30px;
     background-image: url("../img/icon-plus-mobile.svg");
@@ -50,14 +47,7 @@
     @media (min-width: @tablet-width) {
       width: 60px;
       height: 60px;
-      top: 52px;
-      left: 132px;
-      background-image: url("../img/icon-plus-mobile.svg");
-    }
-
-    @media (min-width: @desktop-width) {
-      top: 51px;
-      left: 92px;
+      margin-bottom: 49px;
     }
   }
 }
