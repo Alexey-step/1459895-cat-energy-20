@@ -1,0 +1,16 @@
+.line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 13px;
+    background-color: @basic-green;
+
+    @media (min-width: @tablet-width) {
+      top: 23px;
+    }
+  }
+}

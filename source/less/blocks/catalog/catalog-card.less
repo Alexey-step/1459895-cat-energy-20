@@ -15,34 +15,47 @@
 
 .catalog-card__item {
   position: relative;
-  padding-bottom: 25px;
-  padding-top: 11px;
-  margin: 0 0 8px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 
   &::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -20px;
-    width: 320px;
+    left: 0;
+    width: 100%;
     height: 1px;
-    background-color: @background-lightgrey;
+    background-color: @light-grey;
 
     @media (min-width: @tablet-width) {
       display: none;
     }
   }
 
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+}
+
+.catalog-card__item-wrapper {
+  .container();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 25px;
+  padding-top: 11px;
+
   @media (min-width: @tablet-width) {
     position: relative;
     background-color: @basic-grey;
     padding: 0 36px 40px 36px;
-    margin: 0;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    width: auto;
   }
 
   @media (min-width: @desktop-width) {

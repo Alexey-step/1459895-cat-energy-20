@@ -1,6 +1,4 @@
 .program-selection {
-  .container();
-
   margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
@@ -10,6 +8,10 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 82px;
   }
+}
+
+.program-selection__wrapper {
+  .container();
 }
 
 .program-selection__title {
@@ -45,16 +47,5 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 0 66px 0;
-  }
-}
-
-.program-selection__form {
-  @media (min-width: @tablet-width) {
-    padding-left: 41px;
-    padding-right: 37px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
   }
 }

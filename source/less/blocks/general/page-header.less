@@ -1,4 +1,12 @@
 .page-header {
+  border-bottom: 1px solid @color-lightgrey;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__wrapper {
   .container();
   display: flex;
   flex-direction: column;
@@ -23,20 +31,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -20px;
-    width: 320px;
-    height: 1px;
-    background-color: @color-lightgrey;
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
-  }
 
   & img {
     z-index: 3;

@@ -1,5 +1,4 @@
 .extra-products {
-  .container();
   margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
@@ -11,56 +10,31 @@
   }
 }
 
+.extra-products__title-wrapper {
+  margin: 0 auto;
+  width: 320px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
 .extra-products__title {
   .font(24px, 24px);
   position: relative;
   color: @basic-black;
-  margin: 0 0 13px;
-  border-bottom: 1px solid @background-lightgrey;
+  margin: 0;
   padding: 0 0 35px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    right: -20px;
-    width: 53px;
-    height: 2px;
-    background-color: @basic-green;
-
-    @media (min-width: @tablet-width) {
-      width: 328px;
-      top: 20px;
-      right: -30px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 957px;
-      top: 20px;
-      right: -110px;
-    }
-  }
 
   @media (min-width: @tablet-width) {
     .font(36px, 36px);
     border: none;
     margin: 0 0 80px;
-    padding: 0 0 0 37px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      left: -30px;
-      width: 30px;
-      height: 2px;
-      background-color: @basic-green;
-
-      @media (min-width: @desktop-width) {
-        width: 70px;
-        left: -110px;
-      }
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -84,6 +58,8 @@
 }
 
 .extra-products__wrapper {
+  .container();
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;

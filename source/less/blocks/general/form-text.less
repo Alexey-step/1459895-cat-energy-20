@@ -1,0 +1,28 @@
+.form-text {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 22px;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px 0 40px;
+    margin-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 70px;
+    padding: 0 40px 0 40px;
+  }
+
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      padding: 0 37px 0 36px;
+      margin-left: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 70px;
+      padding: 0 40px 0 35px;
+    }
+  }
+}

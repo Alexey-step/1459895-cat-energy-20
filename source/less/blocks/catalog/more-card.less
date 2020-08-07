@@ -4,15 +4,17 @@
 
 
   @media (min-width: @tablet-width) {
-    background-color: @basic-white;
     margin: 0;
     border: 2px solid @basic-grey;
-    padding-top: 52px;
-    padding-bottom: 38px;
+    padding-top: 0;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    padding: 51px 38px 40px 38px;
+.more-card__wrapper {
+  padding-top: 0;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
   }
 }
 
@@ -48,6 +50,7 @@
       width: 60px;
       height: 60px;
       margin-bottom: 49px;
+      margin-top: 52px;
     }
   }
 }
