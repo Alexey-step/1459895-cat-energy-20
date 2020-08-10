@@ -1,0 +1,65 @@
+.field__label,
+.field__input {
+  .font(16px, 18px);
+  font-family: @basic-font;
+  text-transform: uppercase;
+  color: @basic-darkgrey;
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 30px);
+  }
+}
+
+.field__label {
+  margin-right: 10px;
+}
+
+.field__input {
+  margin: 0 0 13px;
+  padding: 13px 0 13px 16px;
+  flex-grow: 1;
+  border: 1px solid @input-border;
+  outline: transparent;
+
+  &:hover {
+    border: 1px solid @scale-background;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid @basic-darkgrey;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 20px;
+    padding: 10px 0 10px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 0 11px 20px;
+  }
+}
+
+.field__textarea {
+  .font(16px, 18px);
+  font-family: @basic-font;
+  text-transform: uppercase;
+  color: @basic-darkgrey;
+  padding: 13px 0 121px 15px;
+  width: 280px;
+  border: 1px solid @input-border;
+
+  &::placeholder {
+    color: @basic-darkgrey;
+  }
+
+  @media (min-width: @tablet-width) {
+    .font(20px, 30px);
+    width: 631px;
+    padding: 10px 0 134px 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
