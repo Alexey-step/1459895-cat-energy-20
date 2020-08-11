@@ -1,9 +1,35 @@
 .page-footer__wrapper {
   .container();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .page-footer {
   background-color: @basic-grey;
   padding-top: 39px;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 57px;
+    padding-bottom: 58px;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }

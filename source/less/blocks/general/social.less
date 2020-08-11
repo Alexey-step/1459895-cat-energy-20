@@ -1,5 +1,43 @@
 .social__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  .list-reset();
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  margin-bottom: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 280px;
+    height: 1px;
+    background-color: @light-grey;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 280px;
+    height: 1px;
+    background-color: @light-grey;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
 }

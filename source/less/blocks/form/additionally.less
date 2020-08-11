@@ -1,0 +1,41 @@
+.additionally {
+  .container();
+  margin-top: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 57px;
+    padding: 0 67px 0 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px 0 110px;
+  }
+}
+
+.additionally__list {
+  .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 123px;
+    row-gap: 32px;
+    width: 565px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 104px;
+    row-gap: none;
+    width: 100%;
+  }
+}
+
+.additionally__item {
+  display: flex;
+  align-items: baseline;
+
+  &:last-child .checkbox__label {
+    margin-bottom: 0;
+  }
+}

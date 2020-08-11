@@ -1,0 +1,27 @@
+.cat-data {
+  .container();
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 67px 0 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.cat-data__list {
+  .list-reset();
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.cat-data__item {
+  display: flex;
+  align-items: baseline;
+}
