@@ -10,30 +10,23 @@
 }
 
 .form__wrapper {
-  border: none;
-  margin: 0 0 27px;
+  margin-bottom: 27px;
 
-  @media (min-width: @desktop-width) {
-    margin: 0 0 69px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
   }
 
-  &--checkbox {
-    margin: 0 0 34px;
-
-    @media (min-width: @tablet-width) {
-      margin: 0 0 54px;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin: 0 0 61px;
-    }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 68px;
   }
 }
 
 .form__wrapper-textarea {
   .container();
+  margin-top: 34px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 76px;
     padding: 0 67px 0 71px;
   }
 
@@ -44,16 +37,19 @@
 
 .form__btn-wrapper {
   .container();
+  margin-top: 34px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0 67px 0 71px;
+    margin-top: 54px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px 0 110px;
+    margin-top: 61px;
   }
 }
 
