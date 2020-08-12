@@ -9,8 +9,12 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a href="index.html" class="page-header__logo">
-          <img src="img/logo-mobile.svg" alt="Логотип компании Cat Energy">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Логотип компании Cat Energy">
+          </picture>
         </a>
         <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
@@ -148,7 +152,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a href="index.html" class="page-footer__logo">
-          <img src="https://via.placeholder.com/128x24" alt="Логотип компании Cat Energy">
+          <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип компании Cat Energy">
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">

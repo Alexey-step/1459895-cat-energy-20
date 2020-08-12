@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header page-header--index">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img src="img/logo-mobile.svg" alt="Логотип компании Cat Energy">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Логотип компании Cat Energy">
+          </picture>
         </a>
         <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
@@ -37,7 +41,11 @@
         <div class="main-block__wrapper">
           <h1 class="main-block__title">Функциональное<br> питание для котов</h1>
           <p class="main-block__text">Занялся собой? Займись котом!</p>
-          <img class="main-block__img" src="img/index-can-mobile@1x.png" alt="Корм Cat Energy Pro со вкусом курицы">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
+            <img class="main-block__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Корм Cat Energy Pro со вкусом курицы">
+          </picture>
           <a class="main-block__link button" href="form.html" >Подобрать программу</a>
         </div>
       </section>
@@ -111,8 +119,20 @@
             </p>
           </div>
           <div class="example__img-wrapper">
-            <img class="example__img example__img--fat" src="img/before-mobile@1x.png" alt="Толстый кот">
-            <img class="example__img example__img--thin" src="img/after-mobile@1x.png" alt="Худой кот">
+            <div class="example__img-wrapper-fat">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+                <img class="example__img example__img--fat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Толстый кот">
+              </picture>
+            </div>
+            <div class="example__img-wrapper-thin">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                <img class="example__img example__img--thin" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Худой кот">
+              </picture>
+            </div>
             <div class="example__buttons">
               <button type="button" class="example__button example__button--was">Было</button>
               <div class="example__progress">
@@ -138,7 +158,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
-          <img src="https://via.placeholder.com/128x24" alt="Логотип компании Cat Energy">
+          <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип компании Cat Energy">
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">

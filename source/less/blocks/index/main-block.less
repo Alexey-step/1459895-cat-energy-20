@@ -7,21 +7,15 @@
   background-size: 100%;
   background-color: @basic-green;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to top, #ffffff 175px, transparent 175px),
+      url("../img/index-background-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     background-image: none;
     background-color: @basic-white;
     margin-bottom: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    position: relative;
-    background-image: linear-gradient(to right, #ffffff 610px, transparent 610px),
-      url("../img/index-background-desktop@1x.jpg");
-    background-color: @basic-green;
-    margin-bottom: -120px;
-    top: -120px;
-    z-index: 1;
-    height: 696px;
   }
 }
 
@@ -35,6 +29,8 @@
 
   @media (min-width: @desktop-width) {
     padding-right: 0;
+    padding-top: 111px;
+    padding-bottom: 185px;
   }
 }
 
@@ -56,8 +52,8 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
+    padding-top: 0;
     margin: 0 0 40px;
-    padding-top: 223px;
   }
 }
 
@@ -89,12 +85,13 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
-    top: 143px;
+    top: 32px;
     left: 558px;
-    z-index: -1;
+    z-index: 2;
   }
 }
 
@@ -108,9 +105,11 @@
 
   @media (min-width: @tablet-width) {
     .font(20px, 0);
+    position: relative;
     width: 244px;
     min-height: 54px;
     margin-left: 82px;
     align-items: center;
+    z-index: 3;
   }
 }
