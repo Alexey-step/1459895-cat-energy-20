@@ -59,6 +59,14 @@
   margin: 0;
   width: 140px;
 
+  & br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     .font(16px, 20px);
     width: 159px;
@@ -70,13 +78,6 @@
     width: 155px;
     text-align: left;
     margin-right: 0;
-  }
-}
-
-.contacts__text {
-  @media (min-width: @tablet-width) {
-    display: block;
-    margin-top: 20px;
   }
 }
 
