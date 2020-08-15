@@ -1,4 +1,6 @@
 .contacts {
+  position: relative;
+
   &--background {
     background-color: @basic-grey;
   }
@@ -10,11 +12,21 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 28px;
-  padding-bottom: 22px;
+  padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 66px;
-    padding-bottom: 51px;
+    padding-top: 63px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 570px;
+    height: 201px;
+    background-color: @basic-white;
+    padding: 52px 89px 51px 76px;
+    top: 95px;
+    left: 110px;
   }
 }
 
@@ -27,9 +39,16 @@
   margin-right: 2px;
 
   @media (min-width: @tablet-width) {
-    .font(20px, 21px);
+    .font(20px, 22px);
     width: 171px;
     margin-left: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .font(20px, 21px);
+    width: 163px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -45,5 +64,31 @@
     width: 159px;
     text-align: right;
     margin-right: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 155px;
+    text-align: left;
+    margin-right: 0;
+  }
+}
+
+.contacts__text {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+.contacts__map {
+  height: 362px;
+  background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    height: 396px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
   }
 }
