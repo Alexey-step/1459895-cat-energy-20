@@ -1,10 +1,31 @@
 .copyright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__link {
   .font(16px, 18px);
   font-family: @special-font;
   color: @basic-darkgrey;
+
+  &:hover path,
+  &:focus path {
+    fill: @basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--logo {
+    & path {
+      fill: @special-greydark;
+    }
+  }
+}
+
+.copyright__svg {
+  width: 27px;
+  height: 34px;
 }
