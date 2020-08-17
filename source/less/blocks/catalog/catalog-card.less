@@ -38,6 +38,18 @@
   @media (min-width: @desktop-width) {
     width: 245px;
   }
+
+  &:nth-child(2n) .catalog-card__img {
+    @media (min-width: @tablet-width) {
+      top: -69px;
+      left: -4px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -70px;
+      left: -1px;
+    }
+  }
 }
 
 .catalog-card__item-wrapper {
@@ -88,7 +100,8 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    top: -64px;
+    top: -60px;
+    left: -2px;
     width: auto;
     min-height: 200px;
     margin: 0 -42px -39px;

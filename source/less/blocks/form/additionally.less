@@ -1,14 +1,15 @@
 .additionally {
   .container();
-  margin-top: 34px;
+  margin-top: 38px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 57px;
+    margin-top: 60px;
     padding: 0 67px 0 71px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px 0 110px;
+    margin-top: 61px;
   }
 }
 
@@ -18,14 +19,14 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 123px;
+    column-gap: 124px;
     row-gap: 32px;
     width: 565px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 104px;
+    column-gap: 80px;
     row-gap: none;
     width: 100%;
   }
@@ -35,6 +36,10 @@
   display: flex;
   align-items: baseline;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 9px;
+  }
 
   &:last-child {
     margin-bottom: 0;
