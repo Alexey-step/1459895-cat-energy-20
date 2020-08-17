@@ -33,11 +33,11 @@
   @media (min-width: @tablet-width) {
     padding-top: 77px;
     padding-left: 52px;
-    padding-bottom: 53px;
+    padding-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 55px;
+    padding-bottom: 58px;
     padding-right: 51px;
   }
 
@@ -45,7 +45,7 @@
     margin: 0 0 20px;
 
     @media (min-width: @tablet-width) {
-      margin: 0 0 30px;
+      margin: 0 0 31px;
     }
 
     @media (min-width: @desktop-width) {
@@ -59,7 +59,7 @@
   position: relative;
   text-transform: uppercase;
   color: @basic-black;
-  margin: 0 0 29px;
+  margin: 0 0 30px;
   padding-left: 91px;
 
   @media (min-width: @tablet-width) {
@@ -76,7 +76,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: -7px;
+    top: -4px;
     left: 22px;
     width: 50px;
     height: 50px;
@@ -108,8 +108,8 @@
   }
 
   &--cat::before {
-    top: -20px;
-    left: 29px;
+    top: -10px;
+    left: 28px;
     width: 50px;
     height: 53px;
     background-image: url("../img/icon-cat-slim.svg");
@@ -130,7 +130,7 @@
   }
 
   &--panther::before {
-    top: 3px;
+    top: 7px;
     left: 13px;
     width: 67px;
     height: 28px;
@@ -158,19 +158,19 @@
   position: relative;
   color: @basic-darkgrey;
   width: 227px;
-  margin: 0 0 15px 20px;
+  margin: 0 0 19px 20px;
   border-bottom: 1px solid @light-grey;
   padding-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     .font(16px, 24px);
     padding: 0;
-    margin: 0 0 48px;
+    margin: 0 0 52px;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 23px;
+    margin: 0 0 26px;
   }
 
   &--cat {
@@ -215,14 +215,19 @@
     position: absolute;
     background-repeat: no-repeat;
     background-position: 0 0;
-    top: 6px;
-    right: -47px;
+    top: 7px;
+    right: -49px;
     width: 32px;
     height: 10px;
     background-image: url("../img/icon-right-arrow-long.svg");
 
     @media (min-width: @tablet-width) {
       top: 10px;
+      right: -58px;
+    }
+
+    @media (min-width: @tablet-width) {
+      right: -61px;
     }
   }
 }
