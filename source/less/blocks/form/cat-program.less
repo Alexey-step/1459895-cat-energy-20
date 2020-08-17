@@ -1,9 +1,16 @@
 .cat-program {
   position: relative;
-  padding: 20px 0 22px;
+  padding: 27px 0 27px;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-bottom: 79px;
+  }
 
   @media (min-width: @desktop-width) {
     padding: 0;
+    margin-bottom: 73px;
   }
 
   &::before {

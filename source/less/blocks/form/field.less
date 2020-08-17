@@ -23,11 +23,12 @@
 }
 
 .field__label {
-  margin-right: 10px;
+  position: relative;
+  margin-right: 13px;
 }
 
 .field__input {
-  padding: 13px 0 13px 16px;
+  padding: 13px 0 13px 14px;
   flex-grow: 1;
   border: 1px solid @input-border;
   outline: transparent;
@@ -39,6 +40,11 @@
   &:focus,
   &:active {
     border: 1px solid @basic-darkgrey;
+  }
+
+  &:focus:invalid,
+  &:active:invalid {
+    border: 1px solid @error;
   }
 
   @media (min-width: @tablet-width) {
@@ -69,4 +75,42 @@
     padding: 10px 19px;
     min-height: 174px;
   }
+}
+
+.field__svg {
+  &--email {
+    position: absolute;
+    top: 17px;
+    right: 15px;
+    width: 20px;
+    height: 14px;
+
+    @media (min-width: @tablet-width) {
+      top: 19px;
+      right: 19px;
+    }
+  }
+
+  &--phone {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+
+    @media (min-width: @tablet-width) {
+      top: 16px;
+      right: 17px;
+    }
+  }
+}
+
+.field__input:focus ~ .field__svg,
+.field__input:active ~ .field__svg {
+  fill: @basic-green;
+}
+
+.field__input:focus:invalid ~ .field__svg,
+.field__input:active:invalid ~ .field__svg {
+  fill: @error;
 }

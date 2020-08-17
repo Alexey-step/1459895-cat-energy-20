@@ -10,24 +10,30 @@
 }
 
 .form__wrapper {
-  margin-bottom: 27px;
+  &--additionally {
+    margin-bottom: 40px;
+    margin-top: 24px;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
-  }
+    @media (min-width: @tablet-width) {
+      margin-bottom: 52px;
+      margin-top: 62px;
+    }
 
-  @media (min-width: @desktop-width) {
-    margin-bottom: 68px;
+    @media (min-width: @desktop-width) {
+      margin-top: 64px;
+      margin-bottom: 57px;
+    }
   }
 }
 
 .form__wrapper-textarea {
   .container();
-  margin-top: 34px;
+  margin-top: 33px;
 
   @media (min-width: @tablet-width) {
     margin-top: 76px;
     padding: 0 67px 0 71px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,19 +43,16 @@
 
 .form__btn-wrapper {
   .container();
-  margin-top: 34px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0 67px 0 71px;
-    margin-top: 54px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px 0 110px;
-    margin-top: 61px;
   }
 }
 
@@ -60,7 +63,7 @@
   width: 280px;
   min-height: 40px;
   cursor: pointer;
-  margin: 0 0 21px;
+  margin: 0 0 16px;
 
   @media (min-width: @tablet-width) {
     .font(20px, 0);
