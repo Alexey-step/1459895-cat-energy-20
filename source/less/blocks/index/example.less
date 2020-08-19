@@ -237,6 +237,7 @@
 .example__img {
   width: 311px;
   height: 232px;
+  display: none;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -247,15 +248,16 @@
     height: 523px;
   }
 
-  &--thin {
-    display: none;
+  &--active {
+    display: block;
   }
 }
 
-.example__img-wrapper-fat {
-  margin: 0 0 33px;
+.example__img-wrapper-cat {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 28px;

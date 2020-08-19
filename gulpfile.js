@@ -5,6 +5,10 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const rename = require("gulp-rename");
+const svgstore = require("gulp-svgstore");
 
 // Styles
 
@@ -22,6 +26,37 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+// image
+
+const image = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.mozjpeg({quality: 90, progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"));
+}
+
+exports.image = image;
+
+const webpimage = () => {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"));
+}
+
+exports.webpimage = webpimage;
+
+const sprite = () => {
+  return gulp.src("source/img/**/icon-*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("source/img"));
+}
+
+exports.sprite = sprite;
 
 // Server
 

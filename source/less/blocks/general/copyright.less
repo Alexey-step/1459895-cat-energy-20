@@ -9,23 +9,18 @@
   font-family: @special-font;
   color: @basic-darkgrey;
 
-  &:hover path,
-  &:focus path {
-    fill: @basic-green;
-  }
-
   &:active {
     opacity: 0.3;
-  }
-
-  &--logo {
-    & path {
-      fill: @special-greydark;
-    }
   }
 }
 
 .copyright__svg {
   width: 27px;
   height: 34px;
+  fill: @special-greydark;
+
+  &:hover,
+  &:focus {
+    fill: @basic-green;
+  }
 }
