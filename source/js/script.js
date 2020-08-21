@@ -23,7 +23,8 @@ menuButton.addEventListener('click', function() {
 });
 
 if(buttonWas !== null) {
-  buttonWas.addEventListener('click', function () {
+  buttonWas.addEventListener('click', function (evt) {
+    evt.preventDefault();
     if(exampleImgThin.classList.contains("example__img--active")) {
       exampleImgThin.classList.remove("example__img--active");
       exampleImgFat.classList.add("example__img--active");
@@ -34,7 +35,8 @@ if(buttonWas !== null) {
 };
 
 if(buttonBecame !== null) {
-  buttonBecame.addEventListener('click', function () {
+  buttonBecame.addEventListener('click', function (evt) {
+    evt.preventDefault();
     if(exampleImgFat.classList.contains("example__img--active")) {
       exampleImgFat.classList.remove("example__img--active");
       exampleImgThin.classList.add("example__img--active");
