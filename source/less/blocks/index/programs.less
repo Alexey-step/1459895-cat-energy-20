@@ -201,6 +201,13 @@
   color: @basic-black;
   padding-left: 19px;
 
+  &:hover,
+  &:focus {
+    &::after {
+      background-image: url("../img/right-arrow-verylong.svg");
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }

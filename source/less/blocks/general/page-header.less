@@ -1,6 +1,10 @@
 .page-header {
   border-bottom: 1px solid @color-lightgrey;
 
+  @media (max-width: @mobile-width-only) {
+    overflow: hidden;
+  }
+
   @media (min-width: @tablet-width) {
     border: none;
   }
@@ -18,7 +22,7 @@
         height: 696px;
         background-image: url("../img/index-background-desktop@1x.jpg");
         background-color: @basic-green;
-        background-position: 0;
+        background-position: 0 0;
         background-size: cover;
 
         @media (min-resolution: 2dppx) {
@@ -51,7 +55,7 @@
 .page-header__logo {
   position: relative;
   padding-top: 11px;
-  padding-bottom: 17px;
+  padding-bottom: 14px;
   display: flex;
   align-items: center;
   justify-content: flex-start;

@@ -1,13 +1,15 @@
-.copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .copyright__link {
   .font(16px, 18px);
   font-family: @special-font;
   color: @basic-darkgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover .copyright__svg,
+  &:focus .copyright__svg {
+    fill: @basic-green;
+  }
 
   &:active {
     opacity: 0.3;
@@ -18,9 +20,4 @@
   width: 27px;
   height: 34px;
   fill: @special-greydark;
-
-  &:hover,
-  &:focus {
-    fill: @basic-green;
-  }
 }
