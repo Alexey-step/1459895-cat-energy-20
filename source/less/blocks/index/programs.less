@@ -112,7 +112,7 @@
     left: 28px;
     width: 50px;
     height: 53px;
-    background-image: url("../img/icon-cat-slim.svg");
+    background-image: url("../img/cat-slim.svg");
 
     @media (min-width: @tablet-width) {
       width: 140px;
@@ -134,7 +134,7 @@
     left: 13px;
     width: 67px;
     height: 28px;
-    background-image: url("../img/icon-cat-pro.svg");
+    background-image: url("../img/cat-pro.svg");
 
     @media (min-width: @tablet-width) {
       width: 268px;
@@ -201,6 +201,13 @@
   color: @basic-black;
   padding-left: 19px;
 
+  &:hover,
+  &:focus {
+    &::after {
+      background-image: url("../img/right-arrow-verylong.svg");
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -219,7 +226,7 @@
     right: -49px;
     width: 32px;
     height: 10px;
-    background-image: url("../img/icon-right-arrow-long.svg");
+    background-image: url("../img/right-arrow-long.svg");
 
     @media (min-width: @tablet-width) {
       top: 10px;

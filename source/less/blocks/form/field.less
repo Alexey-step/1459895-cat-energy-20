@@ -8,10 +8,15 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 18px;
+  }
 }
 
 .field__label,
-.field__input {
+.field__input,
+.field__input::placeholder {
   .font(16px, 18px);
   font-family: @basic-font;
   text-transform: uppercase;
@@ -25,6 +30,10 @@
 .field__label {
   position: relative;
   margin-right: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
 }
 
 .field__input {
@@ -37,13 +46,17 @@
     border: 1px solid @scale-background;
   }
 
+  &:required:focus,
+  &:required:active {
+    border: 1px solid @basic-darkgrey;
+  }
+
   &:focus,
   &:active {
     border: 1px solid @basic-darkgrey;
   }
 
-  &:focus:invalid,
-  &:active:invalid {
+  &:invalid {
     border: 1px solid @error;
   }
 
@@ -105,12 +118,11 @@
   }
 }
 
-.field__input:focus ~ .field__svg,
-.field__input:active ~ .field__svg {
+.field__input:required:focus ~ .field__svg,
+.field__input:required:active ~ .field__svg {
   fill: @basic-green;
 }
 
-.field__input:focus:invalid ~ .field__svg,
-.field__input:active:invalid ~ .field__svg {
+.field__input:invalid ~ .field__svg {
   fill: @error;
 }
