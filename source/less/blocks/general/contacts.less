@@ -13,6 +13,7 @@
   align-items: center;
   padding-top: 28px;
   padding-bottom: 25px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     padding-top: 63px;
@@ -59,14 +60,6 @@
   color: @basic-darkgrey;
   margin: 0;
   width: 140px;
-
-  & br {
-    display: none;
-
-    @media (min-width: @tablet-width) {
-      display: block;
-    }
-  }
 
   @media (min-width: @tablet-width) {
     .font(16px, 20px);
