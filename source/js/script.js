@@ -60,4 +60,4 @@ var myGeoObjects = new ymaps.Placemark([59.938635, 30.323118], {}, {
 });
 
     myMap.geoObjects.add(myGeoObjects);
-};
+}
