@@ -1,20 +1,13 @@
 .more-card {
   position: relative;
   padding-top: 18px;
+  background-color: @basic-white;
 
 
   @media (min-width: @tablet-width) {
     margin: 0;
     border: 2px solid @basic-grey;
     padding-top: 0;
-  }
-}
-
-.more-card__wrapper {
-  padding-top: 0;
-
-  @media (min-width: @tablet-width) {
-    background-color: @basic-white;
   }
 }
 
@@ -31,7 +24,7 @@
 
   @media (min-width: @tablet-width) {
     .font(20px, 22px);
-    margin: 0 0 23px;
+    margin: 0 0 22px;
     max-width: 134px;
   }
 
@@ -49,9 +42,13 @@
     @media (min-width: @tablet-width) {
       width: 60px;
       height: 60px;
-      margin-bottom: 49px;
+      margin-bottom: 46px;
       margin-top: 52px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 26px;
   }
 }
 

@@ -1,4 +1,5 @@
 .example {
+  position: relative;
   background-color: @example-background;
 
   @media (min-width: @tablet-width) {
@@ -9,6 +10,20 @@
 
   @media (min-width: @desktop-width) {
     border: none;
+    background-image: none;
+  }
+
+  &::after {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      height: 462px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, #f2f2f2 72.4%, #eaeaea 72.4%);
+      z-index: 1;
+    }
   }
 }
 
@@ -46,6 +61,7 @@
     padding: 0;
     margin-bottom: 0;
     display: block;
+    z-index: 2;
   }
 }
 
@@ -226,15 +242,18 @@
 }
 
 .example__img-wrapper {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     width: 708px;
     height: 620px;
     margin: 0 auto;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     width: 690px;
     height: 656px;
+    z-index: 2;
   }
 }
 
@@ -261,7 +280,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 33px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 9px;
