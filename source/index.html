@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>"Cat Energy" - Главная</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   </head>
   <body class="page__body">
     <header class="page-header page-header--index">
@@ -143,11 +145,11 @@
               </picture>
             </div>
             <div class="example__buttons">
-              <button type="button" class="example__button example__button--was">Было</button>
+              <button type="button" class="example__button example__button--was" aria-label="Кнопка переключения на картинку состояния Кота до похудения">Было</button>
               <div class="example__progress">
-                <button type="button" class="example__toggle"></button>
+                <button type="button" class="example__toggle" aria-label="Кнопка для просмотра состояния Кота до и после программы для похудения"></button>
               </div>
-              <button type="button" class="example__button example__button--became">Стало</button>
+              <button type="button" class="example__button example__button--became" aria-label="Кнопка переключения на картинку состояния Кота после похудения">Стало</button>
             </div>
           </div>
         </div>
@@ -173,21 +175,21 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a href="#" class="social__link social__link--vkontakte">
+              <a href="https://vk.com/htmlacademy" class="social__link social__link--vkontakte" aria-label="мы в vk">
                 <svg class="social__svg social__svg--vk" width="22" height="12">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--instagram">
+              <a href="https://www.instagram.com/htmlacademy/" class="social__link social__link--instagram" aria-label="мы в instagram">
                 <svg class="social__svg social__svg--inst" width="16" height="16">
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--facebook">
+              <a href="https://up.htmlacademy.ru/" class="social__link social__link--facebook" aria-label="мы в facebook">
                 <svg class="social__svg social__svg--fb" width="10" height="18">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
@@ -204,8 +206,8 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=93cee435-5eb7-4a06-891d-d9213210f53d&lang=ru_RU&onload=init" type="text/javascript">
+    <script src="js/script.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=93cee435-5eb7-4a06-891d-d9213210f53d&lang=ru_RU&onload=init">
     </script>
   </body>
 </html>
