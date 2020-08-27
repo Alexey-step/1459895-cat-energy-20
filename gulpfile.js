@@ -150,8 +150,6 @@ exports.start = gulp.series(
   copy,
   styles,
   scripts,
-  image,
-  webpimage,
   sprite,
   html,
   server,
